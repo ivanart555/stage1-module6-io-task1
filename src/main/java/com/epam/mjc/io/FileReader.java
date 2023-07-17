@@ -20,10 +20,8 @@ public class FileReader {
                 line = br.readLine();
             }
 
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found!");
         } catch (IOException e) {
-            System.out.println("Something went wrong with file operations.");
+            throw new RuntimeException(e);
         }
 
         ContentParser contentParser = new ContentParser();
