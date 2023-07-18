@@ -28,7 +28,7 @@ public class FileReader {
             }
 
         } catch (FileNotFoundException e) {
-            logger.warn("File " + "(Path:" + file.getPath() + ")" + " not found!");
+            logger.warn("File (Path: {}) not found!", file.getPath());
         } catch (IOException e) {
             logger.warn("Something went wrong with IO!");
         }
